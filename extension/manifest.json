@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Renfent",
+  "version": "0.1.0",
+  "description": "Multiformalización de reservas desde la página de Renfe.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://venta.renfe.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://venta.renfe.com/vol/journeyFormalization.do*"],
+      "js": ["assets/content.js"],
+      "css": ["assets/content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
